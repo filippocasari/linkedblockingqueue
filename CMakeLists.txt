@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.19)
+project(linkedblockingqueue)
+
+set(CMAKE_CXX_STANDARD 11)
+add_library(linkingblockingqueue.h STATIC main.cpp consumerproducer.cpp)
+add_library(blocking_queue.h STATIC prova1.cpp)
+link_libraries("-lpthread")
+link_libraries("-lczmq")
+link_libraries("-lzmq")
+add_executable(linkedblockingqueue main.cpp)
+add_executable(PROVA1 prova1.cpp)
+add_executable(CONSUMERPRODUCER consumerproducer.cpp)
